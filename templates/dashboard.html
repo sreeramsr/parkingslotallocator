@@ -1,0 +1,34 @@
+{% extends 'app.html' %}
+{% block content %}
+<br><br><br><br><br>
+    <h1>Welcome, {{user[1]}}</h1>
+    
+    
+
+    <h2>Your Booking Details</h2>
+    <table class="table">
+        <tr>
+            <th class="table-dark">Booking ID</th>
+            <th class="table-dark">Vehicle No</th>
+            <th class="table-dark">Date</th>
+            <th class="table-dark">From Time</th>
+            <th class="table-dark">To Time</th>
+        </tr>
+        {% for booking in bookings %}
+        <tr>
+            <td class="table-primary">#PARKSYNC{{ booking[0] }}</td>
+            <td class="table-primary">{{ booking[1] }}</td>
+            <td class="table-primary">{{ booking[2] }}</td>
+            <td class="table-primary">{{ booking[3] }}</td>
+            <td class="table-primary">{{ booking[4] }}</td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="5">No bookings found</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    
+{% endblock %}
+

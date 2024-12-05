@@ -1,0 +1,67 @@
+{% extends 'app.html' %}
+{% block content %}
+
+
+
+
+
+
+
+
+  
+  <div class="card border-dark mb-3" style="max-width: 18rem;">
+    <div class="card-header">PARKING</div>
+    <div class="card-body text-dark">
+      <h5 class="card-title">PARK TAMBARAM</h5>
+      <div id="space-count">Loading...</div>
+      <p class="card-text">Available slot</p>
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-primary" disabled onclick="redirectToBookingPage()">BOOK</button>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+  <script>
+    let c = 0; // Initialize your variable here
+    const updateButtonState = () => {
+      const btn = document.querySelector('.btn-primary');
+      if (c > 0) {
+        btn.disabled = false;
+      } else {
+        btn.disabled = true;
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+      // Initial check
+      updateButtonState();
+
+      // Fetch space count every 5 seconds
+      setInterval(fetchSpaceCount, 5000);
+
+      // Initial fetch
+      fetchSpaceCount();
+    });
+
+    function fetchSpaceCount() {
+      fetch('/get_space')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('space-count').innerText = data.space;
+          c = parseInt(document.getElementById('space-count').innerText); // Update `c` with the value from the element
+          updateButtonState(); // Update button state after fetching space count
+        })
+        .catch(error => {
+          console.error('Error fetching space count:', error);
+        });
+    }
+
+    function redirectToBookingPage() {
+      window.location.href = '/booking'; // Change this URL to your desired booking page URL
+    }
+  </script>
+
+  {% endblock %}
