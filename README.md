@@ -1,1 +1,10 @@
 # flask-mysql-auth-system
+![Screenshot 2024-09-23 225646](https://github.com/user-attachments/assets/643b1263-4906-48ab-a3c6-5d3a579bc2cc)
+![Screenshot 2024-09-19 154804](https://github.com/user-attachments/assets/27e2762e-763d-4138-bf7c-e3323b1ea477)
+![Screenshot 2024-09-19 154744](https://github.com/user-attachments/assets/2af1d666-f910-4610-be47-43d2f84428af)
+![Screenshot 2024-09-19 154653](https://github.com/user-attachments/assets/a51d32ac-f8d1-4e7f-847c-157668953fea)
+![Screenshot 2024-09-19 154541](https://github.com/user-attachments/assets/73443a35-dadf-4d58-9358-c35612005318)
+![Screenshot 2024-09-19 154440](https://github.com/user-attachments/assets/72d7a4a2-1125-407d-8ee7-762b7afc5448)
+![Screenshot 2024-09-19 154331](https://github.com/user-attachments/assets/f898b82b-056b-43c1-ac1d-1ae60a996837)
+![Screenshot 2024-09-19 154313](https://github.com/user-attachments/assets/8c3deadf-b392-4db7-8f6f-9e1fbdd368ad)
+![Screenshot 2024-09-19 154225](https://github.com/user-attachments/assets/c93e3564-18b4-401e-9729-4c8dd4bcdb08)
